@@ -19,8 +19,6 @@ chrome.tabs.onActivated.addListener(activeInfo => {
     if (activeTab) {
       activeTab.time++;
       if (activeTab.time >= limit) {
-        alert(`You've spent too much time on ${activeTab.site}`);
-        activeTab.time = 0;
       }
     }
   }
