@@ -2,9 +2,7 @@ let timeSpent = {};
 let limit = 300; // 300 5 min : sec
 
 chrome.tabs.onActivated.addListener(activeInfo => {
-  const tabId = activeInfo.tabId;
-  const site = timeSpent[tabId] || { site: "", time: 0 };
-
+  const tabId = activeInfo.tabId
   chrome.tabs.get(tabId, tab => {
     const url = new URL(tab.url).hostname;
     if (!site.site) site.site = url;
