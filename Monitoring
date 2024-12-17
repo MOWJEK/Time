@@ -15,3 +15,5 @@ chrome.tabs.onActivated.addListener(activeInfo => {
   if (alarm.name === "trackTime") {
     const activeTab = timeSpent[activeTabId];
     if (activeTab) 
+
+
